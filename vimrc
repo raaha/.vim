@@ -59,7 +59,8 @@ autocmd BufNewFile,BufReadPost *.md setl ts=4 sw=4 sts=4 expandtab
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 
 " Markdown Export to pdf 
-autocmd Filetype markdown map <F5> :!pandoc<space><C-r>%<space>-o<space><C-r>%.pdf --listings<Enter><Enter>
+"autocmd Filetype markdown map <F5> :!pandoc<space><C-r>%<space>-o<space><C-r>%.pdf --listings<Enter><Enter>
+autocmd Filetype markdown map <F5> :!pandoc<space><C-r>%<space>-o<space><C-r>%.pdf --from markdown --template eisvogel --listings<Enter><Enter>
 
 " python indent
 autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4 textwidth=80 smarttab expandtab
